@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>API CALLS</title>
-</head>
-<body>
-    <h1>hello</h1>
-    <h2>User dashboard</h2>
-    <div>Create User</div>
-    <form action="post" id="create-user">
-        <input type="text" name="name" id="" placeholder="name">
-        <input type="text" name="lastName" id="" placeholder="lastName">
-        <input type="email" name="email" id="" placeholder="email">
-        <!-- <input type="text" name="goal" id="" placeholder="goal">
-        <input type="text" name="name" id="" placeholder="name"> -->
-        <input type="submit" value="Create">
-    </form>
-    <div id="students-list"></div>
-    <h2>Teacher dashboard</h2>
-</body>
-<script src="app.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API calls | Async | Await | Constructor</title>
+    </head>
+    <body>
+        <h1>CRUD</h1>
+        <p>C: Create</p>
+        <p>R: Read</p>
+        <p>U: Update</p>
+        <p>D: Delete</p>
+        <h2>User dashboard</h2>
+        <button type="button" onclick="getStudents()">
+            Get Students Data
+        </button>
+        <div id="student-list">
+            <table border="1"  style="margin: 15px;" >
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="students-data"></tbody>
+            </table>
+        </div>
+        <div>Create User</div>
+        <form id="create-user">
+            <input type="text" name="name" placeholder="name" />
+            <input type="text" name="lastName" placeholder="lastName" />
+            <input type="email" name="email" placeholder="email" />
+            <input type="submit" value="Create" />
+        </form>
+        <div id="students-list"></div>
+        <div>Update User</div>
+        <form id="update-user"></form>
+        <h2>Teacher Dashboad</h2>
+    </body>
+    <script src="app.js"></script>
 </html>
